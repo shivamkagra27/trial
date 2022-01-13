@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Team Engineers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/nav.css">
+    <!--NavBar CSS-->
+    <link rel="stylesheet" href="css/home.css">
+    <!--LandingPage CSS-->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png"> <!-- Site Icon -->
+
+    <!--Fonts Used-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <!-- / Fonts Used-->
+    <style>
+
+        .branch {
+            background-color: #004AAD;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            transition: background-color 0.6s;
+        }
+
+        .branch:hover {
+            border: 1px solid #004AAD;
+            border-radius: 4px;
+            color: #004AAD;
+            background-color: white;
+        }
+
+        .page-section {
+            margin-top: 20px;
+            position: relative;
+            padding-top: 20px;
+            padding-bottom: 130px;
+            color: #898798;
+            overflow: hidden;
+        }
+
+        .subhead {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #898798;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .title-section {
+            color: #645F88;
+            margin-top: 20px;
+            margin-bottom: 64px;
+        }
+
+        .subsection {
+            color: #645F88;
+            margin-bottom: 36px;
+        }
+
+        .divider {
+            display: block;
+            width: 80%;
+            height: 3px;
+            border-radius: 40px;
+            background-color: #004AAD;
+            animation-name: custom;
+            animation-duration: 2s;
+            animation-timing-function: ease-out;
+            transform: scale(0.8);
+        }
+
+        .content-btn{
+            margin: 10px;
+            margin-top: 40px;
+        }
+
+        .btn{
+            margin: 15px 40px;
+            width: 150px;
+        }
+
+    </style>
+
+</head>
+
+<!-- /Nav Bar-->
+<%-include('../nav2')%>
+    <!-- /Nav Bar-->
+
+    <!--1st Container -->
+    <div class="page-section bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="title-section">ELECTRONICS & COMMUNICATION ENGINEERING</h2>
+                <div class="subhead">Content Selection</div>
+                <h2 class="subsection">Please select your content type</h2>
+                <div class="divider mx-auto"></div>
+
+                <div class="content-btn">
+                    
+                    <button type="button" class="btn branch dropdown-toggle btn-lg" data-toggle="dropdown">
+                            BOOKS
+                    </button>
+                    <div class="dropdown-menu">
+                        <h5 class="dropdown-header">Semester Selection Menu</h5>
+                        <a class="dropdown-item" href="/ECE/books/1">Semester 1</a>
+                        <a class="dropdown-item" href="/ECE/books/2">Semester 2</a>
+                        <a class="dropdown-item" href="/ECE/books/3">Semester 3</a>
+                        <a class="dropdown-item" href="/ECE/books/4">Semester 4</a>
+                        <a class="dropdown-item" href="/ECE/books/5">Semester 5</a>
+                        <a class="dropdown-item" href="/ECE/books/6">Semester 6</a>
+                        <a class="dropdown-item" href="/ECE/books/7">Semester 7</a>
+                        <a class="dropdown-item" href="/ECE/books/8">Semester 8</a>
+                    </div>
+                   <span>
+                    <button type="button" class="btn branch dropdown-toggle btn-lg" data-toggle="dropdown">
+                        NOTES
+                </button>
+                    <div class="dropdown-menu">
+                      
+                        <h5 class="dropdown-header">Semester Selection Menu</h5>
+                        <a class="dropdown-item" href="/ECE/notes/1">Semester 1</a>
+                        <a class="dropdown-item" href="/ECE/notes/2">Semester 2</a>
+                        <a class="dropdown-item" href="/ECE/notes/3">Semester 3</a>
+                        <a class="dropdown-item" href="/ECE/notes/4">Semester 4</a>
+                        <a class="dropdown-item" href="/ECE/notes/5">Semester 5</a>
+                        <a class="dropdown-item" href="/ECE/notes/6">Semester 6</a>
+                        <a class="dropdown-item" href="/ECE/notes/7">Semester 7</a>
+                        <a class="dropdown-item" href="/ECE/notes/8">Semester 8</a>
+                    </div>
+                </span>
+                <span>
+                    <button type="button" class="btn branch dropdown-toggle btn-lg" data-toggle="dropdown">
+                        PYQs
+                </button>
+                    <div class="dropdown-menu">
+                        <h5 class="dropdown-header">Semester Selection Menu</h5>
+                        <a class="dropdown-item" href="/ECE/PYQ/1">Semester 1</a>
+                        <a class="dropdown-item" href="/ECE/PYQ/2">Semester 2</a>
+                        <a class="dropdown-item" href="/ECE/PYQ/3">Semester 3</a>
+                        <a class="dropdown-item" href="/ECE/PYQ/4">Semester 4</a>
+                        <a class="dropdown-item" href="/ECE/PYQ/5">Semester 5</a>
+                        <a class="dropdown-item" href="/ECE/PYQ/6">Semester 6</a>
+                        <a class="dropdown-item" href="/ECE/PYQ/7">Semester 7</a>
+                        <a class="dropdown-item" href="/ECE/PYQ/8">Semester 8</a>
+                    </div>
+                    </span>
+                    
+                </div>
+
+            </div>
+        </div> <!-- .container -->
+    </div> <!-- .page-section -->
+    <!-- /1st Container -->
+    <%-include('../footer')%>
+    </body>
+
+</html>

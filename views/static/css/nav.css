@@ -1,0 +1,23 @@
+    .active > .nav-link{
+        color:#004AAD !important;
+        border-bottom: 1px solid #004AAD;
+    }
+    .name
+    {
+        color:#004AAD;
+        font-weight:700;
+    }
+    .nav-link{
+        font-weight: 400;
+        margin: 0px 10px;
+    }
+
+    .navbar-brand{
+        overflow: hidden;
+        animation:typing 3s;
+    }
+
+    @keyframes typing {
+        from { width: 0;}
+        to { width: 135px;}
+    }

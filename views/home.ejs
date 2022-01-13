@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Team Engineers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="css/nav.css">
+  <!--NavBar CSS-->
+  <link rel="stylesheet" href="css/home.css">
+  <!--LandingPage CSS-->
+  <link rel="icon" type="image/x-icon" href="images/favicon.png"> <!-- Site Icon -->
+
+  <!--Fonts Used-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@300&display=swap" -->
+    <!-- rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&display=swap" rel="stylesheet">
+  <!-- / Fonts Used-->
+
+
+</head>
+<!--Nav Bar-->
+<%-include('./nav')%>
+  <!-- /Nav Bar-->
+
+  <!--1st Container -->
+  <div class="container rounded pt-4 pb-4 mt-2 mb-5 mainbox">
+    <div class="row align-items-center">
+      <div class="col-md-6 pt-4 order-md-0 order-1">
+        <center>
+          <div class="welcome">Hey There , Welcome</div>
+          <div class="message">Kindly select your branch </div>
+
+          <div class="dropdown mt-5 mb-5">
+            <button type="button" class="btn branch dropdown-toggle btn-lg" data-toggle="dropdown">
+              Branch Selection Menu
+            </button>
+            <div class="dropdown-menu">
+              <h5 class="dropdown-header">Branch Selection Menu</h5>
+              <a class="dropdown-item" href="/BIO">BioTechnology</a>
+              <a class="dropdown-item" href="/CSE">Computer Science & Engineering</a>
+              <a class="dropdown-item" href="/ECE">Electronics & Communication Engineering</a>
+              <a class="dropdown-item" href="/EEE">Electronics & Electrical Engineering</a>
+              <a class="dropdown-item" href="/IT">Information Technology</a>
+              <a class="dropdown-item" href="/MECH">Mechanical Engineering</a>
+            </div>
+          </div>
+        </center>
+      </div>
+      <div class="col-md-6 order-md-1 order-0">
+
+        <div id="demo" class="carousel slide" data-ride="carousel" data-interval="3000">
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/logo.svg" class="image">
+            </div>
+            <div class="carousel-item">
+              <img src="images/core team.png" width="100%" height="100%" class="image">
+            </div>
+            <div class="carousel-item">
+              <img src="images/banner_image_1.svg" class="image">
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- /1st Container -->
+
+  <%-include('./footer')%>
+  <script>
+  </script>
+  </body>
+
+</html>

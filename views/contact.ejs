@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Team Engineers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="<script src='https://kit.fontawesome.com/a076d05399.js'"></script>
+
+    <link rel="stylesheet" href="css/nav.css">
+    <!--NavBar CSS-->
+    <link rel="stylesheet" href="css/home.css">
+    <!--LandingPage CSS-->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png"> <!-- Site Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Fonts Used-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <!-- / Fonts Used-->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .images {
+            height: 100px;
+            animation-name: custom;
+            animation-duration: 2s;
+            animation-timing-function: ease-out;
+            transform: scale(0.8);
+        }
+
+        .contact-heading {
+            font-size: 20px;
+        }
+
+        .page-section {
+            /* margin-top: 20px; */
+            position: relative;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            color: #898798;
+            overflow: hidden;
+        }
+
+
+        .title-section {
+            color: #645F88;
+            margin: 20px 0px;
+        }
+
+        .subhead {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #898798;
+            font-weight: 500;
+            margin-bottom: 23px;
+        }
+
+        .subsection {
+            color: #645F88;
+            margin-bottom: 36px;
+        }
+
+        .form-container {
+            margin: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .form-items {
+            width: 50%;
+        }
+
+        .form-heading {
+            margin-top: 25px;
+            margin-bottom: 45px;
+            text-align: center;
+            font-size: 40px;
+            color: #645f88;
+        }
+
+        .form-button {
+            margin: 20px auto;
+        }
+
+        .form-button:hover {
+            box-shadow: 3px 3px 4px #645f88;
+        }
+
+        .btn {
+            color: white;
+            background-color: #6c55f9;
+            border: 2px solid #4939a9;
+        }
+
+        .btn:hover {
+            color: white;
+            background-color: #6c55f9;
+        }
+
+        .page-banner {
+            color: #645F88;
+            margin: auto;
+            margin-top: 70px;
+            display: block;
+            width: 90%;
+            height: 300px;
+            border-radius: 35px;
+        }
+
+        .breadcrumb {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+            list-style: none;
+            background-color: #e9ecef;
+            border-radius: 0.25rem;
+        }
+
+        .breadcrumb-item {
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .btn-scroll {
+            position: absolute;
+            top: 404px;
+            margin: auto;
+            width: 30px;
+            height: 40px;
+            font-size: 36px;
+            line-height: 44px;
+            background-color: #fff;
+            color: #645F88;
+            text-align: center;
+            border-radius: 40px;
+            box-shadow: 0 2px 6px rgb(100 95 136 / 24%);
+        }
+
+        #back-to-top {
+            position: fixed;
+            right: 12px;
+            bottom: 10px;
+            padding: 10px;
+            width: 60px;
+            height: 60px;
+            font-size: 36px;
+            background-color: #fff;
+            color: #645F88;
+            text-align: center;
+            border-radius: 40px;
+            box-shadow: 0 2px 6px rgb(100 95 136 / 24%);
+            transform: rotate(315deg);
+            visibility: hidden;
+        }
+
+        .fa:hover {
+            text-decoration: none;
+            color: #645F88;
+            border: 2px groove rgba(99, 94, 135, 0.24);
+            height: 43px;
+        }
+    </style>
+
+</head>
+<!--Nav Bar-->
+<%- include('./nav') %>
+    <!-- /Nav Bar-->
+
+    <header>
+        <div class="container">
+            <div class="page-banner bg-light">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-6">
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                <li class="breadcrumb-item active">Contact Us</li>
+                            </ul>
+                        </nav>
+                        <h1 class="text-center">Contact Us</h1>
+                    </div>
+                    <a href="#contact-info" class="btn-scroll fa">&#xf103;</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="contact-info" class="page-section">
+        <div class="container">
+            <div class="row text-center align-items-center">
+                <div class="col-lg-4 py-3">
+                    <div class="display-4 text-center text-primary">
+                        <img class="images" src="images/instagram.png" alt="">
+                    </div>
+                    <p class="contact-heading mb-3 font-weight-medium text-lg">Instagram</p>
+                    <p class="mb-0 text-secondary">Team Engineers</p>
+                    <p class="mb-0 text-secondary">Instagram Account</p>
+                </div>
+                <div class="col-lg-4 py-3">
+                    <div class="display-4 text-center text-primary">
+                        <img class="images" src="images/phone.png" alt="">
+                    </div>
+                    <p class="contact-heading mb-3 font-weight-medium text-lg">Phone</p>
+                    <p class="mb-0"><a href="#" class="text-secondary">79880-08862</a></p>
+                    <p class="mb-0"><a href="#" class="text-secondary">78766-23696</a></p>
+                </div>
+                <div class="col-lg-4 py-3">
+                    <div class="display-4 text-center text-primary">
+                        <img class="images" src="images/email.png" alt="">
+                    </div>
+                    <p class="contact-heading mb-3 font-weight-medium text-lg">Email Address</p>
+                    <p class="mb-0"><a href="#" class="text-secondary">teamengineersece@gmail.com</a></p>
+                    <!-- <p class="mb-0"><a href="#" class="text-secondary">teamengineers.com</a></p> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container mt-4">
+            <div class="form-items">
+                <div class="form-content">
+                    <form action="#" class="contact-form py-5 px-lg-5">
+                        <h2 class="form-heading">Get in touch</h2>
+                        <div class="row form-group">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label class="text-black" for="fname">First Name</label>
+                                <input type="text" id="fname" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-black" for="lname">Last Name</label>
+                                <input type="text" id="lname" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label class="text-black" for="email">Email</label>
+                                <input type="email" id="email" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+
+                            <div class="col-md-12">
+                                <label class="text-black" for="subject">Subject</label>
+                                <input type="text" id="subject" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label class="text-black" for="message">Message</label>
+                                <textarea name="message" id="message" cols="30" rows="5" class="form-control"
+                                    placeholder="Any suggestion for us..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row form-group mt-4">
+                            <div class="form-button">
+                                <input type="submit" value="Send Message" class="btn">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+    <a id="back-to-top" class="fa" href="#">&#xf124;</a>
+    </body>
+
+    <script>
+        // Back to top
+        $('document').ready(function () {
+            var backTop = $("#back-to-top");
+
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 400) {
+                    backTop.css('visibility', 'visible');
+                }
+                else if ($(document).scrollTop() < 400) {
+                    backTop.css('visibility', 'hidden');
+                }
+            });
+
+            backTop.click(function () {
+                $('html').animate({
+                    scrollTop: 0
+                }, 0);
+                return false;
+            });
+        });
+    </script>
+
+</html>

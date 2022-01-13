@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Team Engineers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="<script src='https://kit.fontawesome.com/a076d05399.js'"></script>
+
+    <link rel="stylesheet" href="css/nav.css">
+    <!--NavBar CSS-->
+    <link rel="stylesheet" href="css/home.css">
+    <!--LandingPage CSS-->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png"> <!-- Site Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Fonts Used-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <!-- / Fonts Used-->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .page-section {
+            margin-top: 20px;
+            position: relative;
+            padding-top: 20px;
+            padding-bottom: 60px;
+            color: #898798;
+            overflow: hidden;
+        }
+
+
+        .title-section {
+            font-family: 'Lora', serif;
+            color: #645F88;
+            margin: 20px 0px;
+        }
+
+        .subhead {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #898798;
+            font-weight: 500;
+            margin-bottom: 23px;
+        }
+
+        .subsection {
+            color: #645F88;
+            margin-bottom: 36px;
+        }
+
+        .divider {
+            display: block;
+            margin: auto;
+            width: 80%;
+            height: 3px;
+            border-radius: 40px;
+            background-color: #6C55F9;
+            animation-name: custom;
+            animation-duration: 2s;
+            animation-timing-function: ease-out;
+            transform: scale(0.8);
+        }
+
+        .page-banner {
+            color: #645F88;
+            margin: auto;
+            margin-top: 70px;
+            display: block;
+            width: 90%;
+            height: 300px;
+            border-radius: 35px;
+        }
+
+        .breadcrumb {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+            list-style: none;
+            background-color: #e9ecef;
+            border-radius: 0.25rem;
+        }
+
+        .breadcrumb-item {
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .one-liner{
+            font-size: 28px;
+            color: #69678b;
+        }
+
+        .coHeads-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 100px;
+        }
+
+        .heads{
+            display: flex;
+            margin: 0px 65px;
+            width: 37%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            padding: 32px 20px;
+            /* max-width: 329px; */
+            display: flex;
+            background-color: #6C55F9;
+            color: white;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            border-radius: 4px;
+            box-shadow: 0 4px 16px rgb(100 95 136 / 16%);
+        }
+
+        .card1, .card2{
+            height: 70%;
+            padding: 10px;
+            margin: 10px;
+            width: 90%;
+        }
+
+        .card .header {
+            padding-bottom: 24px;
+        }
+
+        .card .header .title {
+            font-size: 30px;
+            display: block;
+            margin-top: 8px;
+            margin-bottom: 12px;
+            color: white;
+            font-family: 'Lora', serif;
+        }
+
+        .card .header h5 {
+            font-size: 15px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .card .body {
+            padding-top: 24px;
+            padding-bottom: 8px;
+            border-top: 1px solid #DDDBEF;
+            border-bottom: 1px solid #DDDBEF;
+            font-weight: 500;
+        }
+
+        .card .footer {
+            padding-top: 24px;
+            font-size: 20px;
+            font-family: 'Lora', serif;
+        }
+
+        .cohead-image{
+            position: absolute;
+            left: 67%;
+        }
+        #yash{
+            height: 330px;
+            width: 120px;
+        }
+
+        #sandhya{
+            height: 330px;
+            width: 120px;
+        }
+
+        .contributor-section {
+            margin-top: 20px;
+            position: relative;
+            padding-top: 50px;
+            padding-bottom: 60px;
+            color: #898798;
+            overflow: hidden;
+        }
+
+        .contributor-block{
+            margin-top: 25px;
+        }
+
+        .contributor-block h5{
+            font-size: 27px;
+        }
+
+        .contributor-block p{
+            margin-bottom: 2px;
+        }
+
+        .btn-scroll {
+            position: absolute;
+            top: 404px;
+            margin: auto;
+            width: 30px;
+            height: 40px;
+            font-size: 36px;
+            line-height: 44px;
+            background-color: #fff;
+            color: #645F88;
+            text-align: center;
+            border-radius: 40px;
+            box-shadow: 0 2px 6px rgb(100 95 136 / 24%);
+        }
+
+        #back-to-top {
+            position: fixed;
+            right: 12px;
+            bottom: 10px;
+            padding: 10px;
+            width: 60px;
+            height: 60px;
+            font-size: 36px;
+            background-color: #fff;
+            color: #645F88;
+            text-align: center;
+            border-radius: 40px;
+            box-shadow: 0 2px 6px rgb(100 95 136 / 24%);
+            transform: rotate(315deg);
+            visibility: hidden;
+        }
+
+        .fa:hover {
+            text-decoration: none;
+            color: #645F88;
+            border: 2px groove rgba(99, 94, 135, 0.24);
+            height: 43px;
+        }
+    </style>
+
+</head>
+<!--Nav Bar-->
+<%-include('./nav')%>
+    <!-- /Nav Bar-->
+
+    <header>
+        <div class="container">
+            <div class="page-banner bg-light">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-6">
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                <li class="breadcrumb-item active">Our Team</li>
+                            </ul>
+                        </nav>
+                        <h1 class="text-center">Our Team</h1>
+                    </div>
+                    <a href="#shivam" class="btn-scroll fa">&#xf103;</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="shivam" class="page-section text-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 py-3">
+                    <h2 class="title-section">SHIVAM KAGRA</h2>
+                    <div class="subhead">FOUNDER</div>
+                    <div class="divider"></div>
+                    <div class="message">
+                        <p class="one-liner">" I HATE DEADLINES "</p>
+                        <p>No one understands, no one cares; it should be you who take the initiative and lead the deprived</p>
+                        <p>With this in mind, I began developing a website and finally I achieved this milestone</p>
+                        <p>Challenges may come and go, but what should remain constant is your commitment and sheer persistence.</p>
+                        <p>Delighted to have your valueable support and trust and always remember,</p>
+                        <p>This isn't a typical day at the office; instead, it's a day to help the less fortunate.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 py-3">
+                    <div class="img-fluid py-3 text-center">
+                        <img src="images/Shivam.jpg" width="80%" height="80%" class="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="coHead" class="coHeads-section">
+
+        <div class="heads">
+            <div class="card">
+                <div class="card1">
+                    <div class="header">
+                        <div class="title">YASH SAROHA</div>
+                        <h5>CO-FOUNDER</h5>
+                    </div>
+                    <div class="body">
+                        <p>I feel very privileged to be writing this message as the Co-Founder of this website. When I first joined our team, I had a vision of making it unique rather than large, and finally it is happening.</p>
+                        <p>I'd would like to express my gratitude to each and every one of you for your utmost love and support in helping the team achieve its objectives. I am certain that we will continue to surpass expectations and grow our footprints across other disciplines as well.</p>
+                    </div>
+                    <div class="footer">
+                        <p>SHIT HAPPENS, MOVE ON</p>
+                    </div>
+                </div>
+                <!-- <div class="cohead-image"><img src="images/ills.jpeg" id="yash"></div> -->
+            </div>
+        </div>
+
+        <div class="heads">
+            <div class="card">
+                <div class="card2">
+                    <div class="header">
+                        <div class="title">SANDHYA SHARMA</div>
+                        <h5>CO-FOUNDER</h5>
+                    </div>
+                    <div class="body">
+                        <p>To all of our supporters, I extend my heartfelt greetings. It is entirely due to your efforts that I now hold the position of Co-Founder of this distinguished website. It was your love and support for us that kept us going during this trip.
+                        </p>
+                        <p>Our only objective will be to serve you throughout your college career. We will continue to expand, constantly monitoring on our comrades' demands and expectations. Stay tuned!</p>
+                    </div>
+                    <div class="footer">
+                        <p>NO GUTS, NO STORY</p>
+                    </div>
+                </div>
+                <!-- <div class="cohead-image"><img src="images/sandhya.png" id="sandhya"></div> -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CONTRIBUTORS SECTION -->
+
+    <div class="contributor-section bg-light">
+        <div class="container">
+          <div class="text-center">
+            <!-- <div class="subhead">Our services</div> -->
+            <h2 class="title-section">OUR CONTRIBUTORS</h2>
+            <div class="divider mx-auto"></div>
+    
+            <div class="row">
+              <div class="contributor-block col-sm-6 col-lg-4 col-xl-3 py-3">
+                <div class="features">
+                  <div class="header mb-3">
+                    <img src="images/books-2.png" width="100%" height="100%" class="image">
+                  </div>
+                  <h5>Contributor 1</h5>
+                  <p>Name and Branch</p>
+                </div>
+              </div>
+              <div class="contributor-block col-sm-6 col-lg-4 col-xl-3 py-3">
+                <div class="features">
+                  <div class="header mb-3">
+                    <img src="images/books-2.png" width="100%" height="100%" class="image">
+                  </div>
+                  <h5>Contributor 2</h5>
+                  <p>Name and Branch</p>
+                </div>
+              </div>
+              <div class="contributor-block col-sm-6 col-lg-4 col-xl-3 py-3">
+                <div class="features">
+                  <div class="header mb-3">
+                    <img src="images/books-2.png" width="100%" height="100%" class="image">
+                  </div>
+                  <h5>Contributor 3</h5>
+                  <p>Name and Branch</p>
+                </div>
+              </div>
+              <div class="contributor-block col-sm-6 col-lg-4 col-xl-3 py-3">
+                <div class="features">
+                  <div class="header mb-3">
+                    <img src="images/books-2.png" width="100%" height="100%" class="image">
+                  </div>
+                  <h5>Contributor 4</h5>
+                  <p>Name and Branch</p>
+                </div>
+              </div>
+              <div class="contributor-block col-sm-6 col-lg-4 col-xl-3 py-3">
+                <div class="features">
+                  <div class="header mb-3">
+                    <img src="images/books-2.png" width="100%" height="100%" class="image">
+                  </div>
+                  <h5>Contributor 5</h5>
+                  <p>Name and Branch</p>
+                </div>
+              </div>
+              <div class="contributor-block col-sm-6 col-lg-4 col-xl-3 py-3">
+                <div class="features">
+                  <div class="header mb-3">
+                    <img src="images/books-2.png" width="100%" height="100%" class="image">
+                  </div>
+                  <h5>Contributor 6</h5>
+                  <p>Name and Branch</p>
+                </div>
+              </div>
+              <div class="contributor-block col-sm-6 col-lg-4 col-xl-3 py-3">
+                <div class="features">
+                  <div class="header mb-3">
+                    <img src="images/books-2.png" width="100%" height="100%" class="image">
+                  </div>
+                  <h5>Contributor 7</h5>
+                  <p>Name and Branch</p>
+                </div>
+              </div>
+              <div class="contributor-block col-sm-6 col-lg-4 col-xl-3 py-3">
+                <div class="features">
+                  <div class="header mb-3">
+                    <img src="images/books-2.png" width="100%" height="100%" class="image">
+                  </div>
+                  <h5>Contributor 8</h5>
+                  <p>Name and Branch</p>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div> <!-- .container -->
+      </div> <!-- .page-section -->
+    
+
+
+    <a id="back-to-top" class="fa" href="#">&#xf124;</a>
+    </body>
+
+    <script>
+        // Back to top
+        $('document').ready(function () {
+            var backTop = $("#back-to-top");
+
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 400) {
+                    backTop.css('visibility', 'visible');
+                }
+                else if ($(document).scrollTop() < 400) {
+                    backTop.css('visibility', 'hidden');
+                }
+            });
+
+            backTop.click(function () {
+                $('html').animate({
+                    scrollTop: 0
+                }, 0);
+                return false;
+            });
+        });
+    </script>
+
+</html>

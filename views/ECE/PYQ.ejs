@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Team Engineers</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+      <link rel="stylesheet" href="/css/nav.css"> <!-- NavBar CSS -->
+
+   <!--Fonts Used-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
+   <!-- / Fonts Used-->
+
+
+    <style>
+      .mainbox
+       {
+      background-color: #f6f5fc;
+       }
+
+       .maintext
+       {
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-size:3rem;
+        font-weight:500;
+       }
+       select{
+         width:200px;
+         padding:10px;
+         font-family: 'Montserrat', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        border-style:none;
+        border:1px solid #004AAd;
+        border-radius: 5px;
+       }
+       .download
+       {
+         width:200px;
+         font-family: 'Montserrat', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        border:0px solid blue;
+        background:#004AAD;
+        color:white;
+        border-radius:5px;
+        padding: 5px;
+        font-weight: bold;
+       }
+       .download:hover
+       {
+        border:1px solid #004AAD;
+        background:white;
+        color:#004AAD;
+
+       }
+       hr{
+         width:50%;
+       }
+       .dct
+       {
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-size:2rem;
+       }
+       .image
+{
+    animation-name: custom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    transform:scale(1);
+    min-width: 250px;
+      max-width: 300px;
+}
+
+@keyframes custom {
+    from {transform:scale(0);}
+    to {transform:scale(1);}
+  }
+
+    </style>
+    </head>
+    <body>
+      <%-include('../nav2')%>
+<!--1st Container -->
+<div class="container rounded pt-4 pb-4 mt-5 mainbox">
+
+  <div class="row align-items-center ">
+    <div class="col-12">
+      <h1 class="dct text-center">Previous Year Question Papers </h1>
+      <center>
+    <div id="demo" class="carousel slide" data-ride="carousel" data-interval="3000" >
+      
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../../images/image.svg" class="image">
+        </div>
+       
+      </div>
+    </div>
+
+ </center>
+
+
+      </div>
+  </div>
+  </div>
+  <center>
+  <div class="maintext mt-5">Choice is all yours</div>
+      <hr>
+      <select name="subject" id="subjects" onchange="myFunction()" class="mb-2">
+        <option>Select Subject</option>
+         <% for(var i = 0; i<ECE.length; i++){%>
+          <option><%- ECE[i].subject%></option>
+          <% } %>
+        </select>
+        <br>
+        <select name="books" id="books" class="mb-2">
+          <option>Select Subject First</option>
+        </select>
+        <br>
+        <a id="dnld" href="" target="_blank"><button onclick="dwn()" class="download mb-5 mt-1">View</button></a>    
+        <br><br><br>  
+      </center>
+  <!-- /1st Container -->
+
+          <script>
+             var link = [<% for(var u=0; u<ECE2.length; u++){ %>"<%= ECE2[u].link %>",<%}%>];
+           document.getElementById("dnld").style.display="none";
+            const name = [<% for(var u=0; u<ECE2.length; u++){ %>"<%= ECE2[u].name %>",<%}%>];
+            const subject = [<% for(var u=0; u<ECE2.length; u++){ %>"<%= ECE2[u].subject %>",<%}%>];
+            var link2 = [];var count =0;
+            function myFunction()
+            {
+              var a = document.getElementById("subjects").value;  
+            var b = document.getElementById("books");
+            if(a=="Select Subject"){
+              b.innerHTML="<option>Select Subject First</option>";
+               document.getElementById("dnld").style.visibility="hidden";
+            }
+            else{
+              b.innerHTML = "";
+              b.style.display= "none";
+              count=0;
+             for(var i = 0; i<<%= ECE2.length%>; i++)
+            {
+               if(a==subject[i]){
+                 var c = document.createElement("option");
+                 c.text = name[i];
+                 b.options.add(c);
+                link2[count] = link[i];
+                count++;
+               }
+            }
+            b.style.display= "inline";
+            document.getElementById("dnld").style.display="inline";
+          }
+            }
+            function dwn()
+            {
+       
+              if(l==""){
+              var sem = "<%= sem %>";
+              var url = "http://starwebsite.lovestoblog.com/ECE/"+sem+"/"+"books/"+document.getElementById("books").value+".pdf";
+              document.getElementById("dnld").setAttribute("href",url);
+              }
+              else{    
+              var index = document.getElementById("books").selectedIndex;
+               var l = link[index];
+                var url = "https://drive.google.com/file/d/"+link2[index]+"/view?usp=sharing";
+              document.getElementById("dnld").setAttribute("href",url);
+              }
+            }
+        </script>
+  <%-include('../footer')%>
+    </body>
+    </html>
