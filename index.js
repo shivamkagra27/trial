@@ -8,9 +8,9 @@ app.use(express.static("views/static"));
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 var obj; 
 const process = require('process');
-const port = process.env.PORT || 4500;
+const port = 8080;
 app.listen(port);
-console.log("Server Started on port 4500");
+console.log("Server Started on port 8080");
 
 const con = new Mysql({
   // port : "12449",
